@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if courses %}
+        {% for course in courses %}
+        <ul>
+            <li>{{course.name}}</li>
+            <li>{{course.number_of_years}}</li>
+            <li>{{course.hod}}</li>
+        </ul>
+        {% endfor %}
+    {% else %}
+        <p>No courses available</p>
+    {% endif %}
+</body>
+</html>
